@@ -1,0 +1,54 @@
+#%RAML 1.0
+---
+title: starbucks-orders API
+baseUri: http://localhost:5051/{version}
+version: v1
+
+/orders:
+	get:
+		description: |
+			Fetches an order for the provided order id
+		queryParameters:
+		  orderId:
+		  customerId:
+		responses:
+			200:
+			  body:
+				application/json:
+					example: |
+					{
+						"orderId" : "11",
+						"customerId": "C1",
+						"orderDate": "JUL-20-2018",
+						"productId": "P1",
+						"productName": "Caffee Latte",
+						"amount": "3.50",
+					}
+	post:
+		description: |
+			Add a new <<order>>
+		body:
+			application/json:
+				example: |
+					{
+						"customerId": "C1",
+						"orderDate": "JUL-20-2018",
+						"productId": "P1",
+						"productName": "Caffee Latte",
+						"amount": "3.50",
+					}
+
+		responses:
+			200:
+			  body:
+				application/json:
+					example: |
+					{
+						"orderId" : "11",
+						"customerId": "C1",
+						"orderDate": "JUL-20-2018",
+						"productId": "P1",
+						"productName": "Caffee Latte",
+						"amount": "3.50",
+					}
+				
