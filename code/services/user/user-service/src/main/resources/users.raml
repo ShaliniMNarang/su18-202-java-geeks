@@ -1,12 +1,81 @@
 #%RAML 1.0
-title: Users Service
+title: Starbucks Users Service
 version: v1
 mediaType: application/json
-baseUri: http://api.samplehost.com
+baseUri: http://api.starbucks.com/{version}
 /users:
   get:
+    description: Retrieve a collection of users with filters
+    queryParameters:
+      userName:
+        displayName: Username
+        type: string
+        description: Users unqiue username
+        example: jdoe
+        required: false
+      phone:
+        displayName: Phone
+        type: string
+        description: Users phone to unqiuely identify the user
+        example: 408-000-0000
+        required: false
+      email:
+        displayName: Email
+        type: string
+        description: Users email to uniquely identify the user
+        example: john.doe@gmail.com
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "users": [
+                  {
+                    "userId": "550e8400-e29b-41d4-a716-446655440000",
+                    "userName": "jdoe"
+                  },
+                  {
+                    "userId": "550e8400-e29b-41d4-a716-446655440111",
+                    "userName": "rroe"
+                  },
+                  {
+                    "userId": "550e8400-e29b-41d4-a716-446655440222",
+                    "userName": "jadoe"
+                  }
+                ]
+              }
   post:
-  /{userid}:
+  /{userId}:
+    description: User Entity
     get:
+      description: Get the user with 'userId = {userId}'
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "userId": "550e8400-e29b-41d4-a716-446655440000",
+                  "userName": "jdoe",
+                  "firstName": "6:07",
+                  "lastName": "6:07",
+                  "email":"john.doe@gmail.com",
+                  "address":{
+                      "street1": "444 Washington Blvd",
+                      "street2": "Apt 4324",
+                      "city": "Jersey City",
+                      "state": "New Jersey",
+                      "country": "USA",
+                      "latitude": "40.7228124",
+                      "longitude": "-74.0367701999999"
+                    }
+                }
+        404:
+          body:
+            application/json:
+              example: |
+                {"message": "User not found"}
     put:
     delete:
