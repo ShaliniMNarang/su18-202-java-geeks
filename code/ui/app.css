@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.divpadding{
+	padding-bottom: 10px;
+}
+
+.summary{
+color: #9d9d9d;
+}
+
+/* Sticky Footer CSS*/
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
