@@ -14,6 +14,7 @@ public class Card {
 	@Id
 	@GeneratedValue
 	private Long id;
+	private Long userId;
 	private String cardNumber;
 	private String cardHolderName;
 	private String cardExpirationDate;
@@ -28,6 +29,12 @@ public class Card {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getCardNumber() {
 		return cardNumber;

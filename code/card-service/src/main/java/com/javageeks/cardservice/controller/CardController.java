@@ -32,6 +32,11 @@ public class CardController {
 		return new ResponseEntity<Card>(cardRepository.findById(id).get(),HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/user/{userId}",method=RequestMethod.GET)
+	public ResponseEntity<List<Card>> getCardBYUserId(@PathVariable Long userId) {
+		return new ResponseEntity<List<Card>>(cardRepository.findByUserId(userId),HttpStatus.OK);
+	}
+	
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<Card>> getCards() {
 		return new ResponseEntity<List<Card>>(cardRepository.findAll(),HttpStatus.OK);
