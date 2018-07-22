@@ -1,4 +1,4 @@
-package com.sjsu.javageeks.userservice;
+package com.sjsu.javageeks.order;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserServiceApplicationTests {
+public class UserApplicationTests {
 
 	@Test
 	public void contextLoads() {

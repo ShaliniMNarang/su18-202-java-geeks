@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Starbucks by JavaGeeks</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="app.css">
+</head>
+
+<body ng-app="myApp" style="background-color:#F7F7F7;">
+
+	<div ng-include="'views/header.html'"></div>
+	<br/>
+	<div>
+		<div ng-view></div>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="viewModels/app.js"></script>
+	<script src="viewModels/route.js"></script>
+	<script src="viewModels/service.js"></script>
+	<script src="viewModels/controller.js"></script>
+</body>
+</html>
