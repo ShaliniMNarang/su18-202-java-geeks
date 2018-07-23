@@ -4,7 +4,7 @@ Date: 2018-07-22
 
 ## Stand-up Questions
 
-- What tasks did I work on / complete?
+1. What tasks did I work on / complete?
 
 I worked on the following until this point
 
@@ -17,7 +17,7 @@ I worked on the following until this point
 
 
 
-- What am I planning to work on next?
+2. What am I planning to work on next?
 
 I plan to work on the following until our next scrum
 
@@ -27,7 +27,7 @@ I plan to work on the following until our next scrum
 * Setup REST Services in Google Kubernetes Engine
 
 
-- What tasks are blocked waiting on another team member?
+3. What tasks are blocked waiting on another team member?
 
 * Struggling to build docker image as part of my maven build, running into issues with spotify maven docker plugin
 * Due to full day at college on Saturday struggling to find time to meet with team members
