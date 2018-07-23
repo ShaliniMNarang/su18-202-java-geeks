@@ -1,6 +1,5 @@
 package com.sjsu.javageeks.order.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.sql.Date;
 import javax.persistence.GeneratedValue;
@@ -14,23 +13,17 @@ public class OrdersEO {
 	@javax.persistence.Id
 	@GeneratedValue
 	private long orderId;
-	
-	@NotBlank
+
 	private String customerId;
 	
-	
 	private Date orderDate;
-	
-	@NotBlank
+
 	private String productId;
-	
-	@NotBlank
+
 	private String productName;
 	
-	@NotBlank
 	private double amount;
 	
-	@NotBlank
 	private String status;
 	
 	public OrdersEO() {

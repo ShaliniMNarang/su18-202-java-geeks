@@ -10,4 +10,6 @@ public interface OrdersEORepository extends JpaRepository<OrdersEO, Long> {
 	
 	 //To get all orders of a customer
 	List<OrdersEO> findByCustomerId(Long customerId);
+
+	OrdersEO save(OrdersEO oEO);
 }

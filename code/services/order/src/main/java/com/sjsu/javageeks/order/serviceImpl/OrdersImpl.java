@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.sjsu.javageeks.order.entity.OrdersEO;
 import com.sjsu.javageeks.order.entity.OrdersEORepository;
 import com.sjsu.javageeks.order.service.Orders;
+import com.sjsu.javageeks.order.util.*;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,12 +31,10 @@ public class OrdersImpl implements Orders{
 	}
 
 	@Override
-	public void saveOrder(OrdersEO oEO) {
-		try {
-			orderEORepository.save(oEO);
-		}catch(Exception ex) {
-			ex.printStackTrace();
-		}
+	public OrdersEO saveOrder(OrdersEO oEO) {
+			oEO.setStatus(Constants.CONFIRMED_STATUS);
+			oEO = orderEORepository.save(oEO);
+			return oEO;
 	}
 
 }
