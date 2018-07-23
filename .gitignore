@@ -1,6 +1,8 @@
 *.class
 *.ctxt
-doc*
+doc/
 *.idea*
 *.iml
 *gradle-wrapper.properties
+*target*
+.gradle

@@ -1,4 +1,4 @@
-package com.sjsu.javageeks.order;
+package com.sjsu.javageeks.user;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
