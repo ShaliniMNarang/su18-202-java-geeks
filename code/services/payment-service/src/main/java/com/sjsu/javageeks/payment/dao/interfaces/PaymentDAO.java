@@ -1,9 +1,14 @@
 package com.sjsu.javageeks.payment.dao.interfaces;
 
 import com.sjsu.javageeks.payment.model.Payment;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface PaymentDAO {
+import java.util.List;
 
-    void makePayment(Payment payment);
+@Repository
+public interface PaymentDAO extends JpaRepository<Payment, Long> {
+    List<Payment> findByOrderid(String orderId);
+
 
 }
