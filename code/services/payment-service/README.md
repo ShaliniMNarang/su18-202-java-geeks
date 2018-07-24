@@ -1,4 +1,4 @@
-# Spring Boot with Docker
+# Payment Service Spring  Boot with Docker
 
 ### Gradle minimal dependencies
 
@@ -96,41 +96,40 @@ $ java -jar build/libs/spring-boot-gradle-docker.jar
 
 ```docker
 FROM java
-
-VOLUME /tmp
-
-ADD spring-boot-gradle-docker-0.1.0.jar spring-boot-app.jar
-
-RUN bash -c 'touch /spring-boot-app.jar'
-
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/spring-boot-app.jar"]
-
+EXPOSE 8080
+ADD ./payment-service-0.0.1.jar payment-service-0.0.1.jar
+RUN bash -c 'touch /spring-boot-app-0.0.1.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/payment-service"]
 ```
 
 ### Build a Docker Image with Gradle
 
 ```gradle
 buildscript {
+    ext {
+        springBootVersion     = "1.5.2.RELEASE"
+        gradleDockerVersion   = "1.2"
+    }
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
-        classpath('se.transmode.gradle:gradle-docker:1.2')
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("se.transmode.gradle:gradle-docker:${gradleDockerVersion}")
     }
 }
 
-group = 'alexandregama'
+group = "helloravisha"
 
 apply plugin: 'docker'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'gs-spring-boot-docker'
-    version =  '0.1.0'
+    baseName = 'payment-service'
+    version =  '0.0.1'
 }
 
 repositories {
@@ -142,6 +141,15 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'junit', name: 'junit', version: '4.12'
+	compile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+	compile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.1.Final'
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.2.4.Final'
+	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.3'
+    compile("org.springframework.boot:spring-boot-devtools")
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+	    
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
@@ -165,7 +173,7 @@ task wrapper(type: Wrapper) {
 
 Note that we are using the **push** variable with a true value. This means that we will **push** the image that has created by the build gradle.
 
-But where that image will be pushed? Note the another variable named **group**. This indicates the name of our remote docker repository, in my case named as **alexandregama** (https://hub.docker.com/u/alexandregama/). You just need to replace with your own account.
+But where that image will be pushed? Note the another variable named **group**. This indicates the name of our remote docker repository, in my case named as **helloravisha** (https://hub.docker.com/u/alexandregama/). You just need to replace with your own account.
 
 ### Using our new Docker Image
 
@@ -174,21 +182,14 @@ After the **gradle buildDocker** command, we pushed our new image to Docker Hub.
 Next, we will run a new container using the new Docker Image:
 
 ```bash
-$ docker run -it -p 8888:8080 alexandregama/spring-boot-gradle-docker /bin/bash
+$ docker run -it -p 8888:8080 helloravisha/payment-servicer /bin/bash
 ```
 
 Note in the previous command that we are using a port **8888** to access the application.
 
 Note also that we are running our new container and executing the command **/bin/bash** inside the container. It will be useful to see what is happen in the container log. 
 
-Now we might access the application from browser! Just type:
-
-```bash
-$ http://192.168.99.100:8888/hello-docker
-```
-
-
-
+Now we might access the application from browser! 
 
 
 
