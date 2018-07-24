@@ -5,4 +5,8 @@ doc/
 *.iml
 *gradle-wrapper.properties
 *target*
+build/
+out/
+.project
+/bin/
 .gradle
