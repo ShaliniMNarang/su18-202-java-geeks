@@ -22,7 +22,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-spring-boot-docker'
+    baseName = 'payment-service'
     version =  '0.1.0'
 }
 
@@ -43,32 +43,6 @@ task wrapper(type: Wrapper) {
 }
 ```
 
-### Adding a simple REST endpoint
-
-Now we will create a simple REST endpoint to test if our application is working.
-
-```java
-@SpringBootApplication
-@RestController
-public class HelloApplication {
-
-	@RequestMapping("/hello-docker")
-	public String home() {
-		return "Hello Docker World";
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(HelloApplication.class, args);
-	}
-
-}
-```
-
-You could access the REST endpoint in the following address:
-
-```bash
-http://localhost:8080/hello-docker
-```
 
 ### Generating a jar by using Gradle
 
@@ -173,7 +147,7 @@ task wrapper(type: Wrapper) {
 
 Note that we are using the **push** variable with a true value. This means that we will **push** the image that has created by the build gradle.
 
-But where that image will be pushed? Note the another variable named **group**. This indicates the name of our remote docker repository, in my case named as **helloravisha** (https://hub.docker.com/u/alexandregama/). You just need to replace with your own account.
+But where that image will be pushed? Note the another variable named **group**. This indicates the name of our remote docker repository, in my case named as **helloravisha** (https://hub.docker.com/r/helloravisha/payment-service). You just need to replace with your own account.
 
 ### Using our new Docker Image
 
