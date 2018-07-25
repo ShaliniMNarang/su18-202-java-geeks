@@ -4,9 +4,6 @@ import javax.persistence.Entity;
 import java.sql.Date;
 import javax.persistence.GeneratedValue;
 
-import org.hibernate.annotations.Table;
-import org.hibernate.validator.constraints.NotBlank;
-
 @Entity
 @javax.persistence.Table(name = "orders")
 public class OrdersEO {
@@ -30,8 +27,8 @@ public class OrdersEO {
 		
 	}
 
-	public OrdersEO(long orderId, @NotBlank String customerId, @NotBlank Date orderDate, @NotBlank String productId,
-			@NotBlank String productName, @NotBlank double amount, @NotBlank String status) {
+	public OrdersEO(long orderId, String customerId, Date orderDate, String productId,
+			 String productName, double amount, String status) {
 		super();
 		this.orderId = orderId;
 		this.customerId = customerId;
