@@ -12,15 +12,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.javageeks.cardservice.entity.Card;
+import com.javageeks.cardservice.entity.CardDaoImpl;
 import com.javageeks.cardservice.entity.CardRepository;
 import com.javageeks.cardservice.exception.InValidCardException;
 
 @RestController
 @RequestMapping("/api/card")
 public class CardController {
-
+	
 	@Autowired
-	private CardRepository cardRepository;
+	private CardDaoImpl cardDaoImpl;
 	
 	@RequestMapping(value="/test",method=RequestMethod.GET)
 	public String test() {
@@ -29,54 +30,32 @@ public class CardController {
 	
 	@RequestMapping(value="/{id}",method=RequestMethod.GET)
 	public ResponseEntity<Card> getCard(@PathVariable Long id) {
-		return new ResponseEntity<Card>(cardRepository.findById(id).get(),HttpStatus.OK);
+		return new ResponseEntity<Card>(cardDaoImpl.getCard(id),HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/user/{userId}",method=RequestMethod.GET)
 	public ResponseEntity<List<Card>> getCardBYUserId(@PathVariable Long userId) {
-		return new ResponseEntity<List<Card>>(cardRepository.findByUserId(userId),HttpStatus.OK);
+		return new ResponseEntity<List<Card>>(cardDaoImpl.getCardBYUserId(userId),HttpStatus.OK);
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<Card>> getCards() {
-		return new ResponseEntity<List<Card>>(cardRepository.findAll(),HttpStatus.OK);
+		return new ResponseEntity<List<Card>>(cardDaoImpl.getCards(),HttpStatus.OK);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Card> addCard(@RequestBody Card card) {
-		return new ResponseEntity<Card>(cardRepository.save(card),HttpStatus.CREATED);
+		return new ResponseEntity<Card>(cardDaoImpl.addCard(card),HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT)
 	public ResponseEntity<Card> updateCard(@RequestBody Card card) throws InValidCardException {
-		validateExistingCard(card);
-		return new ResponseEntity<Card>(cardRepository.save(card),HttpStatus.OK);
+		return new ResponseEntity<Card>(cardDaoImpl.updateCard(card),HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/{id}",method=RequestMethod.DELETE)
 	public ResponseEntity<Card> deleteCard(@PathVariable Long id) {
-		Card card=cardRepository.findById(id).get();
-		cardRepository.delete(card);
-		return new ResponseEntity<Card>(card,HttpStatus.OK);
-	}
-	
-	private void validateExistingCard(Card card) throws InValidCardException{
-		Card existingCard=null;
-		
-		if (card.getId() == null)
-			throw new InValidCardException(); 
-		else
-			existingCard=cardRepository.findById(card.getId()).get();
-		
-		if (card.getCardNumber() == null || card.getCardNumber().equals(""))
-			card.setCardNumber(existingCard.getCardNumber());
-		
-		if (card.getCardHolderName() == null || card.getCardHolderName().equals(""))
-			card.setCardHolderName(existingCard.getCardHolderName());
-		
-		if (card.getCardExpirationDate() == null || card.getCardExpirationDate().equals(""))
-			card.setCardExpirationDate(existingCard.getCardExpirationDate());
-		
+		return new ResponseEntity<Card>(cardDaoImpl.deleteCard(id),HttpStatus.OK);
 	}
 	
 }
