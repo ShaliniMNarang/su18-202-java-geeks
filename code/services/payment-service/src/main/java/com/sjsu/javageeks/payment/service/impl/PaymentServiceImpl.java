@@ -7,6 +7,15 @@ import com.sjsu.javageeks.payment.service.interfaces.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -34,6 +43,20 @@ public class PaymentServiceImpl implements PaymentService{
             payment.setStatus(PaymentConstants.SUCCESS_STATUS);
         }
         Optional<Payment> paidPayment = Optional.ofNullable(paymentDAO.save(payment));
+        updatePayment(paidPayment.get().getAmount(),paidPayment.get().getCardId());
+
         return paidPayment;
+    }
+
+
+    private void updatePayment(Double balance, String id) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        MultiValueMap<String, String> map= new LinkedMultiValueMap<String, String>();
+        map.add("id", id);
+        map.add("cardBalance", balance.toString());
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> response = restTemplate.postForEntity( PaymentConstants.CARD_REST_URL, request , String.class );
     }
 }

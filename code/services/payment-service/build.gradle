@@ -43,6 +43,8 @@ dependencies {
 	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.3'
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    compile 'io.springfox:springfox-swagger2:2.3.0'
+    compile 'io.springfox:springfox-swagger-ui:2.3.0'
 	    
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
