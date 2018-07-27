@@ -9,8 +9,8 @@ public class Payment {
 
     @Id
     @GeneratedValue
-    private String paymentid;
-    private String cardNo;
+    private Long paymentid;
+    private String cardId;
     private String orderid;
     private String userid;
     private Double amount;
@@ -34,20 +34,21 @@ public class Payment {
         this.orderid = orderid;
     }
 
-    public String getPaymentid() {
+
+    public Long getPaymentid() {
         return paymentid;
     }
 
-    public void setPaymentid(String paymentid) {
+    public void setPaymentid(Long paymentid) {
         this.paymentid = paymentid;
     }
 
-    public String getCardNo() {
-        return cardNo;
+    public String getCardId() {
+        return cardId;
     }
 
-    public void setCardNo(String cardNo) {
-        this.cardNo = cardNo;
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
     }
 
     public String getUserid() {
