@@ -20,8 +20,13 @@ The order microservice has been written to simulate a Starbucks coffee order pro
 4. Compile the project 
 5. Run the project as Spring boot application
 
-## Cloud Installation (Docker on 
-1. 
+## Docker 
+1. The docker file and maven docker plugin are already checked in
+2. Run following mvn command to create docker image: <br/>
+   mvn package dockerfile:build -DskipTests;
+3. To run docker image: <br/>
+   docker run -p 5000:5000 -t java-geeks-card-service/order-service  
+
 
 # UML Diagrams
 ## Class Diagram
@@ -33,12 +38,12 @@ The order microservice has been written to simulate a Starbucks coffee order pro
 ## Deployment Diagram
 
 # REST API calls 
-1. Get a list of orders
+1. Get a list of orders <br/>
 http://<host>:<port>/api/orders 
 
-2. Get a specific Order
+2. Get a specific Order  <br/>
 http://<host>:<port>/api/orders/{id}
   
-3. Create an order
+3. Create an order  <br/>
 http://<host>:<port>/api/orders
 Payload : {"customerId":"shalini","orderDate":"2018-07-23T05:36:57.124Z","productId":"P1","productName":"CaffÃ¨ Americano","amount":3.25}
