@@ -52,8 +52,14 @@ User and Order services were deployed in GKE.
 [Amazon ECS is Amazon Elastic Container Service](https://aws.amazon.com/ecs/)
 Card and Payment services were deployed in ECS.
 ### Steps
-1. 
-
+1. Create a container
+![Alt text](/Presentation/AWSECSContainerDefinition.png)
+2. Create a Task
+![Alt text](/Presentation/AWSECSTaskDefinition.png)
+3. Create a Service
+![Alt text](/Presentation/AWSECSServiceDefinition.png)
+4. Create a Cluster
+![Alt text](/Presentation/AWSECSClusterDefinition.png)
 
 
 
