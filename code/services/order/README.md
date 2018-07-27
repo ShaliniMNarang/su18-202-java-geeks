@@ -9,9 +9,6 @@ The order microservice has been written to simulate a Starbucks coffee order pro
 5. Maven
 6. Docker
 
-# Architecture diagram
-![alt text](OrderArch.png "Order Architecture")
-
 # Setup Instructions
 ## Local Installation
 1. Git clone the repository
@@ -27,15 +24,12 @@ The order microservice has been written to simulate a Starbucks coffee order pro
 3. To run docker image: <br/>
    docker run -p 5000:5000 -t java-geeks-card-service/order-service  
 
-
 # UML Diagrams
 ## Class Diagram
-![alt text](Starbucks_orders_class_diagram.png "Class Diagram")
+![alt text](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/UML/orders/Starbucks_orders_class_diagram.png "Class Diagram")
 
 ## Sequence Diagram
-![alt text](Starbucks_orders_sequence_diagram.png "Seq Diagram")
-
-## Deployment Diagram
+![alt text](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/UML/orders/Starbucks_orders_sequence_diagram.png "Seq Diagram")
 
 # REST API calls 
 1. Get a list of orders <br/>
