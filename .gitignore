@@ -10,3 +10,4 @@ out/
 .project
 /bin/
 .gradle
+*application.properties
