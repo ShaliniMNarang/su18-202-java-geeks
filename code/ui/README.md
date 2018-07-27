@@ -8,7 +8,7 @@ This UI project is created to simulate the order processing at Starbucks using m
 4. Bootstrap
 
 # Architecture diagram
-![alt text](UIArch.png "UI Architecture")
+![alt text](UIArch.jpg "UI Architecture")
 
 # Setup Instructions
 ## Local Installation
