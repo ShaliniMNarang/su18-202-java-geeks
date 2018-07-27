@@ -10,18 +10,22 @@ myApp.config(['$routeProvider', '$qProvider', '$locationProvider', '$httpProvide
 	}).when("/menu", {
 		templateUrl : "views/menu.html"
 	}).when("/order", {
-		templateUrl : "views/order.html"
+		templateUrl : "views/order.html",
+		controller : "orderController"
 	}).when("/reviewOrder", {
 		templateUrl : "views/reviewOrder.html"
 	}).when("/myCards", {
-		templateUrl : "views/myCards.html"
+		templateUrl : "views/myCards.html",
+		controller: "cardController"
 	}).when("/login", {
-		templateUrl : "views/login.html"
+		templateUrl : "views/login.html",
+		controller : "userController"
 	}).when("/addCard", {
-		templateUrl : "views/addCard.html"
+		templateUrl : "views/addCard.html",
+		controller: "addCardController"
 	})
-	
-	
+
+
 	.otherwise({redirectTo: "/"});;
 
 	$qProvider.errorOnUnhandledRejections(false);
