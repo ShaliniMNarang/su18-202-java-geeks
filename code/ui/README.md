@@ -25,3 +25,23 @@ This UI project is created to simulate the order processing at Starbucks using m
 4. Follow the instructions "Setting Up Sample Files" from https://www.nginx.com/blog/setting-up-nginx/ to setup the UI server
 
 # Screenshots
+1. Following screenshot depicts the home page. The user can click on "Sign In" to navigate to the login screen.
+![Alt text](screenshots/1.png)
+
+2. A registered user can sign-in by providing user name and the password.
+![Alt text](screenshots/2.png)
+
+3. A logged in user is taken to the My Cards screen where the user can view his available card balance.
+![Alt text](screenshots/3.png)
+
+4. A user can click on add card to add a new card. The add card screen is depicted in the following screenshot.
+![Alt text](screenshots/4.png)
+
+5. On clicking Menu the user is shown the menu item as follows:
+![Alt text](screenshots/5.png)
+
+6. Upon selecting an item, the user is taken to the order page, where he can order coffee by clicking Add to Order button.
+![Alt text](screenshots/6.png)
+
+7. Once order is conformed the user is taken to Payment screen as follows, where he makes the payment.
+![Alt text](screenshots/7.png)
