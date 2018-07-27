@@ -1,1 +1,35 @@
+# About
+The order microservice has been written to simulate a Starbucks coffee order processing. 
 
+# Technologies used
+1. Spring Boot Web, MVC, JPA, AOP
+2. Java 8
+3. MySQl
+4. Tomcat
+5. Maven
+6. Docker
+
+# Architecture diagram
+![alt text](OrderArch.png "Order Architecture")
+
+# Setup Instructions
+## Local Installation
+1. Git clone the repository
+2. Import the project as an existing maven project in eclipse/maven
+3. Update applications.properties to provide the database connection details and the desired port number
+4. Compile the project 
+5. Run the project as Spring boot application
+
+## Cloud Installation (Docker on 
+1. 
+
+# REST API calls 
+1. Get a list of orders
+http://<host>:<port>/api/orders 
+
+2. Get a specific Order
+http://<host>:<port>/api/orders/{id}
+  
+3. Create an order
+http://<host>:<port>/api/orders
+Payload : {"customerId":"shalini","orderDate":"2018-07-23T05:36:57.124Z","productId":"P1","productName":"CaffÃ¨ Americano","amount":3.25}
