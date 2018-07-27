@@ -2,7 +2,10 @@
 
 ## Starbucks API - Microservices
 
-### Components Architecture
+## Microservices Architecture
+![Alt text](/Presentation/MicroservicesarchitectureDiagram.png)
+
+### Service Architecture
 ![Alt text](/Presentation/ServiceArchitecture.png)
 
 ### Sequence Diagram
