@@ -2,8 +2,8 @@
 
 ## Class Diagram
 
-![Alt text](../../UML/users/ClassDiagram.png)
+![Alt text](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/UML/users/ClassDiagram.png)
 
 ## Sequence Diagram
 
-![Alt text](../../UML/users/SequenceDiagram.png)
+![Alt text](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/UML/users/SequenceDiagram.png)
