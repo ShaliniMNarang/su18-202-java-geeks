@@ -4,8 +4,8 @@
 
 ## Team Members
 
-* [Sunder Thyagarajan - 011528062]()
-* [Ravi Katta - 012127011]()
+* [Sunder Thyagarajan - 011528062](#sunder-thyagarajan)
+* [Ravi Katta - 012127011](#ravi-katta)
 
 
 
@@ -22,10 +22,15 @@
 ## Individual Contributions
 
 ### Sunder Thyagarajan
+
 As part of the team project I was responsible for building users microservices, and deploy the same in cloud a container namely GKE. I wore the hat of product owner and scrum master and built Task dashboard in GIT, followed by formatting the Burndown chart. As a architect designed the REST API using RAML and built a mock service using getsandbox.com, to remove blockers for all dependent stake holders. I took the appraoch domain driven design and used aggregations over a traditional database approach.
 
-Full list of Task
+
 ![Alt text](/Presentation/Sunder-Issue-Dashboard.png)
 
 
 ### Ravi Katta
+
+
+
+![Alt text](/Presentation/Sunder-Issue-Dashboard.png)
