@@ -2,7 +2,7 @@
 title: Starbucks Users Service
 version: v1
 mediaType: application/json
-baseUri: http://api.starbucks.com/{version}
+baseUri: http://api.starbucks.com/api/{version}
 /users:
   get:
     description: Retrieve a collection of users with filters
@@ -62,15 +62,6 @@ baseUri: http://api.starbucks.com/{version}
                   "firstName": "6:07",
                   "lastName": "6:07",
                   "email":"john.doe@gmail.com",
-                  "address":{
-                      "street1": "444 Washington Blvd",
-                      "street2": "Apt 4324",
-                      "city": "Jersey City",
-                      "state": "New Jersey",
-                      "country": "USA",
-                      "latitude": "40.7228124",
-                      "longitude": "-74.0367701999999"
-                    }
                 }
         404:
           body:
