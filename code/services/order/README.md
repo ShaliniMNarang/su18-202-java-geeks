@@ -23,6 +23,15 @@ The order microservice has been written to simulate a Starbucks coffee order pro
 ## Cloud Installation (Docker on 
 1. 
 
+# UML Diagrams
+## Class Diagram
+![alt text](Starbucks_orders_class_diagram.png "Class Diagram")
+
+## Sequence Diagram
+![alt text](Starbucks_orders_sequence_diagram.png "Seq Diagram")
+
+## Deployment Diagram
+
 # REST API calls 
 1. Get a list of orders
 http://<host>:<port>/api/orders 
