@@ -1,24 +1,14 @@
 package com.javageeks.cardservice.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
 import com.javageeks.cardservice.exception.InvalidCardTypeException;
 import com.javageeks.cardservice.util.Constants;
 
-@Entity(name="card")
-@Table(name="card")
-public class Card {
-	@Id
-	@GeneratedValue
+public abstract class CardBase {
 	private Long id;
 	private Long userId;
 	private String cardNumber;
 	private String cardHolderName;
 	private String cardExpirationDate;
-	private double cardBalance;
 	private String cardType;
 	private String defaultCard;
 	private String status;
@@ -54,13 +44,7 @@ public class Card {
 	public void setCardExpirationDate(String cardExpirationDate) {
 		this.cardExpirationDate = cardExpirationDate;
 	}
-	
-	public double getCardBalance() {
-		return cardBalance;
-	}
-	public void setCardBalance(double cardBalance) {
-		this.cardBalance = cardBalance;
-	}
+
 	public String getCardType() {
 		return cardType;
 	}
@@ -84,5 +68,4 @@ public class Card {
 			status=Constants.ACTIVE_STATUS;
 		this.status = status;
 	}
-
 }
