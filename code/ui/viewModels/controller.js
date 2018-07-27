@@ -51,6 +51,7 @@ myApp.controller('cardController',function($scope, httpService, $location, $http
 			$scope.card.cardBalance = 0.0;
 		}else {
 			$scope.card = data.data[0];
+			$rootScope.cardId = data.data[0].id;
 		}
 	});
 
@@ -138,3 +139,35 @@ myApp.controller('orderController',function($scope, httpService, $location, $htt
 
 });
 /*orderController*/
+
+
+//
+/*payController*/
+myApp.controller('payController',function($scope, httpService, $location, $http, $rootScope) {
+	console.log("payController initialized");
+	$scope.payment={};
+
+	//TODO : REMOVE Hardcoded values, once user and other services are in place
+	$scope.payment.orderid = $rootScope.orderId;
+	$scope.payment.userid = $rootScope.userId;
+	$scope.payment.cardId = $rootScope.cardId;
+	$scope.payment.amount = 3.25;
+
+	$scope.doPay = function() {
+			console.log("doPay : start");
+			var config= {
+								transformRequest: angular.identity,
+								headers: {'Content-Type': 'application/json'}
+						};
+			console.log("saveFormData" + JSON.stringify($scope.payment));
+
+			httpService.post($rootScope.paymentURL,JSON.stringify($scope.payment),config).then(function(response) {
+				if(response.data){
+					console.log("response.data" + JSON.stringify(response.data));
+					$location.path("/myCards");
+				}
+			});
+		}
+
+});
+/*payController*/

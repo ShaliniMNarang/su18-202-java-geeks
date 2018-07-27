@@ -75,8 +75,6 @@ myApp.service('card', function() {
 			return this.defaultCard;
 		};
 
-		status
-
 		this.setStatus=function(status){
 			this.status=status;
 		};
@@ -109,4 +107,41 @@ myApp.service('user', function() {
 		};
 	}
 	return new User();
+});
+
+myApp.service('payment', function() {
+	function Payment(){
+		this.setCardId=function(cardId){
+			this.cardId=cardId;
+		};
+
+		this.getCardId=function(){
+			return this.cardId;
+		};
+
+		this.setOrderid=function(orderid){
+			this.orderid=orderid;
+		};
+
+		this.getOrderid=function(){
+			return this.orderid;
+		};
+
+		this.setAmount=function(amount){
+			this.amount=amount;
+		};
+
+		this.getAmount=function(){
+			return this.amount;
+		};
+
+		this.setUserid=function(userid){
+			this.userid=userid;
+		};
+
+		this.getUserid=function(){
+			return this.userid;
+		};
+	}
+	return new Payment();
 });

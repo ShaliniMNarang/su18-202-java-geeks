@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.javageeks.cardservice.exception.InValidCardException;
 
 @Service
-public class CardDaoImpl {
+public class CardServiceImpl implements CardService{
 
 	@Autowired
 	CardRepository cardRepository;
@@ -29,6 +29,7 @@ public class CardDaoImpl {
 		return cardRepository.save(card);
 	}
 	
+	
 	public Card updateCard(Card card) throws InValidCardException {
 		validateExistingCard(card);
 		return cardRepository.save(card);
@@ -42,6 +43,9 @@ public class CardDaoImpl {
 	
 	private void validateExistingCard(Card card) throws InValidCardException{
 		Card existingCard=null;
+		
+		if (card.getCardNumber().length() != 16)
+			throw new InValidCardException();
 		
 		if (card.getId() == null)
 			throw new InValidCardException(); 

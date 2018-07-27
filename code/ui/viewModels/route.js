@@ -13,7 +13,8 @@ myApp.config(['$routeProvider', '$qProvider', '$locationProvider', '$httpProvide
 		templateUrl : "views/order.html",
 		controller : "orderController"
 	}).when("/reviewOrder", {
-		templateUrl : "views/reviewOrder.html"
+		templateUrl : "views/reviewOrder.html",
+		controller: "payController"
 	}).when("/myCards", {
 		templateUrl : "views/myCards.html",
 		controller: "cardController"
