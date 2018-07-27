@@ -23,6 +23,8 @@ This UI project is created to simulate the order processing at Starbucks using m
 2. ssh to the ubuntu instance and install ngnix using following URL - https://www.nginx.com/blog/setting-up-nginx/
 3. Git clone the repository 
 4. Follow the instructions "Setting Up Sample Files" from https://www.nginx.com/blog/setting-up-nginx/ to setup the UI server
+5. Route 53 can be configured to the desired DNS name. Following screen shot depicts the properties to be set.
+![Alt text](screenshots/route53.png)
 
 # Screenshots
 1. Following screenshot depicts the home page. The user can click on "Sign In" to navigate to the login screen.
