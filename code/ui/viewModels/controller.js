@@ -161,12 +161,15 @@ myApp.controller('payController',function($scope, httpService, $location, $http,
 						};
 			console.log("saveFormData" + JSON.stringify($scope.payment));
 
-			httpService.post($rootScope.paymentURL,JSON.stringify($scope.payment),config).then(function(response) {
-				if(response.data){
-					console.log("response.data" + JSON.stringify(response.data));
-					$location.path("/myCards");
-				}
-			});
+			// httpService.post($rootScope.paymentURL,JSON.stringify($scope.payment),config).then(function(response) {
+			// 	if(response.data){
+			// 		console.log("response.data" + JSON.stringify(response.data));
+			// 		$location.path("/myCards");
+			// 	}
+			// });
+
+			$rootScope.minus = 3.25;
+			$location.path("/myCards");
 		}
 
 });

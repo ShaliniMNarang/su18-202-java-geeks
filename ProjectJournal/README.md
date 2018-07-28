@@ -6,7 +6,8 @@
 
 * [Sunder Thyagarajan - 011528062](#sunder-thyagarajan)
 * [Ravi Katta - 012127011](#ravi-katta)
-* [Shalini Narang - 012507573](#Shalini-narang)
+* [Shalini Narang - 012507573](#shalini-narang)
+* [Chidananda Pati - 012506949](#chidananda-pati)
 
 
 

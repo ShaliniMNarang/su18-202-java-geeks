@@ -15,6 +15,9 @@
 ## Service Architecture
 ![Alt text](/Presentation/ServiceArchitecture.png)
 
+## UI Architecture
+![Alt text](/Presentation/ui_arch1.png)
+
 ## Sequence Diagram
 ![Alt text](/UML/SequenceDiagram.png)
 
