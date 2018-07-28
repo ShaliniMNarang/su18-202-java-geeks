@@ -148,7 +148,7 @@ task wrapper(type: Wrapper) {
 Note that we are using the **push** variable with a true value. This means that we will **push** the image that has created by the build gradle.
 
 But where that image will be pushed? Note the another variable named **group**. This indicates the name of our remote docker repository, in my case named as **helloravisha** (https://hub.docker.com/r/helloravisha/payment-service).
-### Using our new Docker Image
+### Using  Docker Image
 
 After the **gradle buildDocker** command, we pushed our new image to Docker Hub. Now we are able to use it.
 
