@@ -1,3 +1,7 @@
+## Blockers
+
+- Container services issues with ECS and Load Balancer
+
 
 ## XP Core Values
 
