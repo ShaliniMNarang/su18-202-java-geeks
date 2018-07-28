@@ -17,7 +17,7 @@ None
 
 ## XP Core Values
 
-- Communication
+- Communication <br/>
 Communication using zoom and whatsapp have been the key to success of this project implementation.
 
 - Simplicity
@@ -26,4 +26,5 @@ Communication using zoom and whatsapp have been the key to success of this proje
 
 - Courage
 
-- Respect
+- Respect<br/>
+Each team member is a working professional and has a family to look after. Respecting their limited availability was crucial and helped us succeed as a team.
