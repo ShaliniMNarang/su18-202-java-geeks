@@ -17,6 +17,7 @@
 
 ## UI Architecture
 ![Alt text](/Presentation/ui_arch1.png)
+[Details](https://github.com/nguyensjsu/su18-202-java-geeks/tree/master/code/ui)
 
 ## Sequence Diagram
 ![Alt text](/UML/SequenceDiagram.png)
@@ -29,11 +30,12 @@ At the start of the project, to prevent any blockers for web and mobile applicat
 ![Alt text](/Presentation/GetSandBox-RAML.png)
 
 ## Aspect Oriented Programming 
-[Code](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/code/services/order/src/main/java/com/sjsu/javageeks/order/util/LogExecutionTimeAspect.java)
 
 As an architect wanted to analyse the time it takes to execute a RESTful service, at the same time I do not want to burden individual developers to log time and dirty their code. So decided to leverage Spring AOP to weave the Logging aspect.
 
 ![Alt text](/Presentation/SpringAOP.png)
+
+[Code](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/code/services/order/src/main/java/com/sjsu/javageeks/order/util/LogExecutionTimeAspect.java)
 
 ## Docker - Image
 [Instructions to Create a Docker image](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/code/services/card-service/Dockercommands)
