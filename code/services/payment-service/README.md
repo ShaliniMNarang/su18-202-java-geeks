@@ -2,7 +2,6 @@
 
 ### Gradle minimal dependencies
 
-We will use gradle as dependency manager. To use spring boot with docker we must set up the *Spring Boot Plugin*
 
 Gradle file:
 
@@ -46,7 +45,7 @@ task wrapper(type: Wrapper) {
 
 ### Generating a jar by using Gradle
 
-To generate a new jar we must use the **gradle build** command. 
+To generate a new jar  use the **gradle build** command. 
 
 Execute the following command:
 
@@ -54,7 +53,7 @@ Execute the following command:
 $ docker build
 ```
 
-This will create a jar file named **gs-spring-boot-docker.jar** in the **build/libs** directory. Note that this name is from build.gradle file.
+This will create a jar file named **payment-service.jar** in the **build/libs** directory. Note that this name is from build.gradle file.
 
 ```bash
 $ build/libs/spring-boot-gradle-docker.jar
@@ -63,7 +62,7 @@ $ build/libs/spring-boot-gradle-docker.jar
 To execute the Application, you just need to execute the jar file and access the address:
 
 ```bash
-$ java -jar build/libs/spring-boot-gradle-docker.jar 
+$ java -jar build/libs/payment-service.jar 
 ```
 
 ### Dockerfile
@@ -72,8 +71,8 @@ $ java -jar build/libs/spring-boot-gradle-docker.jar
 FROM java
 EXPOSE 8080
 ADD ./payment-service-0.0.1.jar payment-service-0.0.1.jar
-RUN bash -c 'touch /spring-boot-app-0.0.1.jar'
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/payment-service"]
+RUN bash -c 'touch /payment-service-0.0.1.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/payment-service-0.0.1.jar"]
 ```
 
 ### Build a Docker Image with Gradle
@@ -155,16 +154,10 @@ After the **gradle buildDocker** command, we pushed our new image to Docker Hub.
 Next, we will run a new container using the new Docker Image:
 
 ```bash
-$ docker run -it -p 8080:8080 helloravisha/payment-servicer /bin/bash
+$ docker run -it -p 8080:8080 helloravisha/payment-servicer 
 ```
 
-Note in the previous command that we are using a port **8888** to access the application.
-
-Note also that we are running our new container and executing the command **/bin/bash** inside the container. It will be useful to see what is happen in the container log. 
-
 Now we might access the application from browser! 
-
-
 
 
 ## Class Diagram
