@@ -15,8 +15,11 @@
 ## Service Architecture
 ![Alt text](/Presentation/ServiceArchitecture.png)
 
+## UI Architecture
+![Alt text](/Presentation/ServiceArchitecture.png)
+
 ## Sequence Diagram
-![Alt text](/UML/SequenceDiagram.png)
+![Alt text](/UML/ui_arch1.png)
 
 ## GetSandbox Mock Services
 At the start of the project, to prevent any blockers for web and mobile application developers, we designed the API structure and provided a mock services leveraging following technologies
