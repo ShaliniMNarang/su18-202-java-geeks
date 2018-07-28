@@ -1,3 +1,7 @@
+# Scrum Report
+
+Date: 2018-07-27
+
 ## Blockers
 
 - Container services issues with ECS and Load Balancer
