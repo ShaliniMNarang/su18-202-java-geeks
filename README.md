@@ -64,6 +64,7 @@ Card and Payment services were deployed in ECS.
 ## Unit Testing
 Automated unit testing is an integral part of agile development principles. It makes the software coding agile. Developers can add new features or refactor code without having to worry about regression issues. Unit testing improves the quality of the code and lowers the cost of software maintainance as the bugs are detected early. As a team we had decided to add unit test cases for the project. We have used JUnit test framework to write unit test cases. Mokito is used to mock database objects because database calls are expensive and setting up data for unit testing is expensive. <br/>
 Following screenshot is taken from one of the unit test classes. It shows the use of Mokito framework and various test cases written.
+
 ![Alt text](/Presentation/unitTest.png)
 
 
