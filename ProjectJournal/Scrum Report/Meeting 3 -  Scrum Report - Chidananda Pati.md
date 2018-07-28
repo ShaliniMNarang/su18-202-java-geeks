@@ -21,11 +21,13 @@ Date: 2018-07-27
 ## XP Core Values
 
 - Communication
+  Had frequent discussion with team members to make sure we all are in the same page.
 
 - Simplicity
 
 
 - Feedback
+  Incorporated feedback from team members.
 
 
 - Courage
