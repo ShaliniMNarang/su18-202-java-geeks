@@ -156,7 +156,7 @@ After the **gradle buildDocker** command, we pushed our new image to Docker Hub.
 Next, we will run a new container using the new Docker Image:
 
 ```bash
-$ docker run -it -p 8888:8080 helloravisha/payment-servicer /bin/bash
+$ docker run -it -p 8080:8080 helloravisha/payment-servicer /bin/bash
 ```
 
 Note in the previous command that we are using a port **8888** to access the application.

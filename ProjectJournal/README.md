@@ -6,6 +6,7 @@
 
 * [Sunder Thyagarajan - 011528062](#sunder-thyagarajan)
 * [Ravi Katta - 012127011](#ravi-katta)
+* [Shalini Narang - 012507573](#Shalini-narang)
 
 
 
@@ -31,6 +32,15 @@ As part of the team project I was responsible for building users microservices, 
 
 ### Ravi Katta
 
-
-
 ![Alt text](/Presentation/Sunder-Issue-Dashboard.png)
+
+### Shalini Narang
+As a part of this project, I was responsible for building the orders microservices and develop the UI. Orders microservice is designed using RAML and published as a mock service in getsandbox.com. The microservice is written using Springboot and deployed in cloud container GKE provided by Google. The UI is designed adhering MVC principles using Angular JS, HTML and Bootstrap. 
+![Alt text](/Presentation/Shalini-Issue-Dashboard.png)
+
+### Chidananda Pati
+
+I developed Card Management domain objects that includes building REST services, deploying the REST services in AWS ECS. REST services are built using spring boot that uses spring data rest, data jpa and web. I have also written automation testing using spring MockMvc and Mockito.
+
+
+![Alt text](/Presentation/Chidananda-Issue-Dashboard.png)

@@ -26,10 +26,12 @@ Deploying to AWS ECS was having issue because of AWS RDS security group rules.
 ## XP Core Values
 
 - Communication
+  Had frequent discussion with team members to make sure we all are in the same page.
 
 - Simplicity
 
 - Feedback
+  Incorporated feedback from team members.
 
 - Courage
 
