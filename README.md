@@ -17,6 +17,7 @@
 
 ## UI Architecture
 ![Alt text](/Presentation/ui_arch1.png)
+
 [Details](https://github.com/nguyensjsu/su18-202-java-geeks/tree/master/code/ui)
 
 ## Sequence Diagram
