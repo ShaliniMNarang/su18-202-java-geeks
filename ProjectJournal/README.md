@@ -32,6 +32,8 @@ As part of the team project I was responsible for building users microservices, 
 
 
 ### Ravi Katta
+As a part of the team project  I developed Payment Management domain objects that includes building REST services, deploying the REST services in AWS ECS. Additionally, I helped with integration testing. Payments Service was dependent on cards Service to manage balances, so this API communicates with Cards API using Spring-REST-Client which was quite challenging when deploying in cloud
+
 
 ![Alt text](/Presentation/Sunder-Issue-Dashboard.png)
 
