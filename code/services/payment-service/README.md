@@ -164,5 +164,11 @@ Now we might access the application from browser!
 
 ![Alt text](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/code/services/payment-service/UML/Project_Class_Diagram.png)
 
+## Sequence Diagram
+
+![Alt text](https://github.com/nguyensjsu/su18-202-java-geeks/blob/master/code/services/payment-service/UML/Payment%20Service%20Seq%20Diagram.png)
+
+
+
 
 
