@@ -35,7 +35,7 @@ As part of the team project I was responsible for building users microservices, 
 As a part of the team project  I developed Payment Management domain objects that includes building REST services, deploying the REST services in AWS ECS. Additionally, I helped with integration testing. Payments Service was dependent on cards Service to manage balances, so this API communicates with Cards API using Spring-REST-Client which was quite challenging when deploying in cloud
 
 
-![Alt text](/Presentation/Sunder-Issue-Dashboard.png)
+![Alt text](/Presentation/Ravi-Issue-Dashboard.png)
 
 ### Shalini Narang
 As a part of this project, I was responsible for building the orders microservices and develop the UI. Orders microservice is designed using RAML and published as a mock service in getsandbox.com. The microservice is written using Springboot and deployed in cloud container GKE provided by Google. The UI is designed adhering MVC principles using Angular JS, HTML and Bootstrap. 
